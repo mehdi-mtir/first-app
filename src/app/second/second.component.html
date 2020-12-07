@@ -1,2 +1,6 @@
 <h1>Second Component</h1>
-Second : {{msg}}
+Second : {{message}}
+<div>
+<input type="text" [(ngModel)] = "message">
+<input type="button" (click)="PasserMessageAuParent()" value="Rafraichir">
+</div>

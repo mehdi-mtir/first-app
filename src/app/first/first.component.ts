@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   templateUrl : './first.component.html'
 })
 export class FirstComponent{
-  message = "Nouveau message!";
+  message = "Message du parent modifié";
+
+  updateMessage(message : string){
+    this.message = message;
+
+  }
 }

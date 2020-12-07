@@ -12,6 +12,10 @@ export class AppComponent {
   imageURL = 'assets/logo2.png';
   jours = ["Lundi", "Mardi", "mercredi", "jeudi", "Vendredi", "samedi"];
 
+  constructor(){
+
+  }
+
   showMessage(){
     return("message");
   }
