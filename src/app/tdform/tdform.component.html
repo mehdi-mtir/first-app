@@ -1,0 +1,22 @@
+<h1>Démo formulaire</h1>
+<!--
+  L'utilisation du mot clé ngForm va demander la création d'un formGroup
+  Un formGroup va regrouper un ou plusieurs formControl
+  Un formControl va représenter un champ du formulaire
+  Parmi les informations fournies par FormControl :
+  - touched / untouched : indiquer si le champ a été touché (pris le focus).
+  - pristine / dirty : indique si le contenu du champ a été modifié
+  - valid / invalid : indiquer si la valeur du champ est valide ou pas
+-->
+
+<form #f="ngForm" (submit)="validerForm(f)">
+  <!-- L'utilisattion du mot clé ngModel va demander la création d'un objet FormControl-->
+  <div>
+    Nom : <input type="text" id="nom" class="form-control" name="nom" ngModel required #n="ngModel">
+    <div *ngIf="n.invalid && n.touched" class="alert alert-danger" role="alert">
+      Le champ nom est obligatoire!
+    </div>
+  </div>
+  <div> Email<input type="email" id="email" class="form-control" name="email" ngModel required email #e="ngModel"></div>
+  <div><input type="submit" [disabled]="f.invalid"  value="Valider" class="btn btn-primary"></div>
+</form>
