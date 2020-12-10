@@ -11,7 +11,8 @@ import { TdformComponent } from './tdform/tdform.component';
 import { DemoServiceComponent } from './demo-service/demo-service.component';
 import { DemoService } from './services/demo.service';
 import { DemoService2Component } from './demo-service2/demo-service2.component';
-
+import { DemoHttpComponent } from './demo-http/demo-http.component';
+import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,11 +22,13 @@ import { DemoService2Component } from './demo-service2/demo-service2.component';
     FormatPrixPipe,
     TdformComponent,
     DemoServiceComponent,
-    DemoService2Component
+    DemoService2Component,
+    DemoHttpComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

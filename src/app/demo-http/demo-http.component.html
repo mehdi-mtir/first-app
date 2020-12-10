@@ -1,0 +1,18 @@
+<h1> Liste des données récupérées</h1>
+<input type="button" class="btn btn-primary" value="Ajouter un post" (click)="add()"/>
+
+<!--ul>
+  <li>{{post.title}}</li>
+</ul-->
+
+<div class="row">
+  <div  *ngFor="let post of posts" class="card col-3 m-3" style="width: 18rem;">
+    <img src="../../assets/news.jpeg" class="card-img-top" alt="news">
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.body}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
